@@ -61,6 +61,8 @@ class Soortactiviteit
         $this->activiteiten=new ArrayCollection();
     }
 
+
+
     /**
      * Get id
      *

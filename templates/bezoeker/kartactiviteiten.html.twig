@@ -12,9 +12,9 @@
             <ul class="list-group">
                 {% for activiteit in soortactiviteiten %}
                 <li class="list-group-item text-primary">{{ activiteit.naam }}
-                <h6>de minimale leeftijd voor {{ activiteit.naam }} is {{ activiteit.minLeeftijd }}</h6>
+                <h6>De minimale leeftijd voor {{ activiteit.naam }} is {{ activiteit.minLeeftijd }}</h6>
                 <h6>{{ activiteit.naam }} duurt ongeveer {{ activiteit.tijdsduur }} minuten</h6>
-                <h6>de prijs voor{{ activiteit.naam }} is €{{ activiteit.prijs }} pp</h6>
+                <h6>De prijs voor {{ activiteit.naam }} is €{{ activiteit.prijs }} pp</h6>
                 </li>
                 {% endfor %}
             </ul>

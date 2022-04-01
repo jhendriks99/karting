@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Activiteit index{% endblock %}
+
+{% block body %}
+    <h1>Activiteit index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Datum</th>
+                <th>Tijd</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for activiteit in activiteits %}
+            <tr>
+                <td>{{ activiteit.id }}</td>
+                <td>{{ activiteit.datum ? activiteit.datum|date('Y-m-d') : '' }}</td>
+                <td>{{ activiteit.tijd ? activiteit.tijd|date('H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('activiteit_show', {'id': activiteit.id}) }}">show</a>
+                    <a href="{{ path('activiteit_edit', {'id': activiteit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('activiteit_new') }}">Create new</a>
+{% endblock %}

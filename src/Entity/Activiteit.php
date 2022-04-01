@@ -66,6 +66,8 @@ class Activiteit
         return $this->users;
     }
 
+
+
     /**
      * Get id
      *
